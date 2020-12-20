@@ -21,10 +21,14 @@ in rec {
   
   dirbuster =  callPackage ./pkgs/tools/security/dirbuster { };
 
-  pwncat = pythonPackages.callPackage ./pkgs/tools/security/pwncat {} ;
+  exploitdb = callPackage ./pkgs/tools/security/exploitdb { };
 
+  nikto = callPackage ./pkgs/tools/security/nikto { };
+
+  pwncat = pythonPackages.callPackage ./pkgs/tools/security/pwncat {} ;
+  
   stegsolve = callPackage ./pkgs/tools/security/stegsolve { };
 
   zsteg = callPackage ./pkgs/tools/security/zsteg { lib = newLib; };
- 
+
 }
