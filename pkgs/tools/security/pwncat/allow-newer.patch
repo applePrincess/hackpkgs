@@ -1,0 +1,24 @@
+--- source/requirements.txt	2020-12-18 14:59:07.568675311 +0000
++++ b/requirements.txt	2020-12-18 15:04:03.389555813 +0000
+@@ -1,4 +1,4 @@
+-bcrypt==3.1.7
++bcrypt>=3.1.7
+ certifi==2020.6.20
+ cffi==1.14.0
+ chardet==3.0.4
+@@ -15,7 +15,7 @@
+ packaging==20.4
+ pathvalidate==2.3.0
+ pprintpp==0.4.0
+-prompt-toolkit==3.0.5
++prompt-toolkit>=3.0.5
+ pycparser==2.20
+ pycryptodome==3.9.8
+ Pygments==2.6.1
+@@ -32,5 +32,5 @@
+ typepy==1.1.1
+ typing-extensions==3.7.4.2
+ urllib3==1.25.9
+-wcwidth==0.1.9
++wcwidth>=0.1.9
+ python-rapidjson==0.9.1
