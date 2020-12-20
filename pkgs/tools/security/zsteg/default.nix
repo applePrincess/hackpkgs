@@ -11,6 +11,6 @@ bundlerApp {
     description = "detect stegano-hidden data in PNG & BMP";
     homepage = "http://zed.0xff.me/";
     license = licenses.mit;
-    maintainers = with maintainers; [ appleprincess ];
+    maintainers = with maintainers; [ applePrincess ];
   };
 }
