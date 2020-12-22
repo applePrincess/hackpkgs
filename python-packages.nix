@@ -47,4 +47,5 @@ python.pkgs // {
 
   base64io = python.callPackage ./pkgs/development/python-modules/base64io { };
   paramiko = python.callPackage ./pkgs/development/python-modules/paramiko { };
+  zlib_wrapper = python.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 }
