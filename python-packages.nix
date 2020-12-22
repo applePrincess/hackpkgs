@@ -49,6 +49,7 @@ python.pkgs // {
   base64io = python.callPackage ./pkgs/development/python-modules/base64io { };
   paramiko = python.callPackage ./pkgs/development/python-modules/paramiko { };
   pyinstaller = python.callPackage ./pkgs/development/python-modules/pyinstaller { };
+  pyminifier = python.callPackage ./pkgs/development/python-modules/pyminifier { };
   pyinstaller-hooks-contrib = python.callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
   zlib_wrapper = python.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 }
