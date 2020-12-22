@@ -45,7 +45,9 @@
 # in 
 python.pkgs // {
 
+  altgraph = python.callPackage ./pkgs/development/python-modules/altgraph { };
   base64io = python.callPackage ./pkgs/development/python-modules/base64io { };
   paramiko = python.callPackage ./pkgs/development/python-modules/paramiko { };
+  pyinstaller-hooks-contrib = python.callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
   zlib_wrapper = python.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 }
