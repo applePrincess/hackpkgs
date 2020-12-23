@@ -47,6 +47,7 @@ python.pkgs // {
 
   altgraph = python.callPackage ./pkgs/development/python-modules/altgraph { };
   base64io = python.callPackage ./pkgs/development/python-modules/base64io { };
+  macholib = python.callPackage ./pkgs/development/python-modules/macholib { };
   paramiko = python.callPackage ./pkgs/development/python-modules/paramiko { };
   pyinstaller = python.callPackage ./pkgs/development/python-modules/pyinstaller { };
   pyminifier = python.callPackage ./pkgs/development/python-modules/pyminifier { };
