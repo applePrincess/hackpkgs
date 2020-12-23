@@ -21,6 +21,8 @@ in rec {
   
   dirbuster =  callPackage ./pkgs/tools/security/dirbuster { };
 
+  empire = callPackage ./pkgs/tools/security/empire { };
+
   exploitdb = callPackage ./pkgs/tools/security/exploitdb { };
 
   nikto = callPackage ./pkgs/tools/security/nikto { };
