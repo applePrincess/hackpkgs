@@ -1,13 +1,10 @@
 { buildPythonPackage, fetchPypi,
-  # PyYAML
+  PyYAML,
   mistune,
   jsonschema,
-  # Flask,
+  Flask,
   callPackage
 }:
-let PyYAML = callPackage ./../PyYAML {};
-    Flask = callPackage ./../Flask { };
-in
 buildPythonPackage rec {
   pname = "flasgger";
   version = "0.9.5";
