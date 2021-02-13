@@ -57,4 +57,6 @@ python.pkgs // {
   PyYAML = python.callPackage ./pkgs/development/python-modules/PyYAML { };
   xlutils = python.callPackage ./pkgs/development/python-modules/xlutils { };
   zlib_wrapper = python.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
+
+  httpbin = python.callPackage ./pkgs/servers/httpbin { };
 }
