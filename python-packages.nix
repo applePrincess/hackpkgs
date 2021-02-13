@@ -52,6 +52,7 @@ python.pkgs // {
   pyinstaller = python.callPackage ./pkgs/development/python-modules/pyinstaller { };
   pyminifier = python.callPackage ./pkgs/development/python-modules/pyminifier { };
   pyinstaller-hooks-contrib = python.callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
+  PyYAML = python.callPackage ./pkgs/development/python-modules/PyYAML { };
   xlutils = python.callPackage ./pkgs/development/python-modules/xlutils { };
   zlib_wrapper = python.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 }
