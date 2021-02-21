@@ -21,9 +21,11 @@ in rec {
   
   dirbuster =  callPackage ./pkgs/tools/security/dirbuster { };
 
-  empire = callPackage ./pkgs/tools/security/empire { };
+  # empire = python3.callPackage ./pkgs/tools/security/empire { };
 
   exploitdb = callPackage ./pkgs/tools/security/exploitdb { };
+
+  GTFOBLookup = callPackage ./pkgs/tools/security/GTFOBLookup { };
 
   nikto = callPackage ./pkgs/tools/security/nikto { };
 
