@@ -14,6 +14,8 @@ rec {
 
   msodbcsql = callPackage ./pkgs/development/libraries/msodbcsql { };
 
+  mssql-tools = callPackage ./pkgs/applications/misc/mssql-tools { };
+
   nikto = callPackage ./pkgs/tools/security/nikto { };
 
   pwncat = pythonPackages.callPackage ./pkgs/tools/security/pwncat {} ;
