@@ -39,8 +39,12 @@
           pyinstaller-hooks-contrib = callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
           PyYAML = callPackage ./pkgs/development/python-modules/PyYAML { };
           requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
+          sherlock = callPackage ./pkgs/tools/security/sherlock {
+            requests-futures = requests-futures;
+            torrequests = torrequests;
+          };
           sublist3r = callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
-          torrequests = callPackage ./pkgs/development/python-modules/torrequests { };
+          torrequest = callPackage ./pkgs/development/python-modules/torrequest { };
           xlutils = callPackage ./pkgs/development/python-modules/xlutils { };
           zlib_wrapper = callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 
