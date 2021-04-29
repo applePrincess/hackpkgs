@@ -1,62 +1,22 @@
 { pkgs, stdenv , python }:
 
-# with pkgs.lib;
-# 
-# self:
-# 
-# let
-#   inherit (self) callPackage;
-#   inherit (python.passthru) isPy27 isPy35 isPy36 isPy37 isPy38 isPy39 isPy3k isPyPy pythonAtLeast pythonOlder;
-# 
-#   namePrefix = python.libPrefix + "-";
-# 
-#   # Derivations built with `buildPythonPackage` can already be overriden with `override`, `overrideAttrs`, and `overrideDerivation`.
-#   # This function introduces `overridePythonAttrs` and it overrides the call to `buildPythonPackage`.
-#   makeOverridablePythonPackage = f: origArgs:
-#     let
-#       ff = f origArgs;
-#       overrideWith = newArgs: origArgs // (if pkgs.lib.isFunction newArgs then newArgs origArgs else newArgs);
-#     in
-#       if builtins.isAttrs ff then (ff // {
-#         overridePythonAttrs = newArgs: makeOverridablePythonPackage f (overrideWith newArgs);
-#       })
-#       else if builtins.isFunction ff then {
-#         overridePythonAttrs = newArgs: makeOverridablePythonPackage f (overrideWith newArgs);
-#         __functor = self: ff;
-#       }
-#       else ff;
-# 
-#   # Get list of required Python modules given a list of derivations.
-#   requiredPythonModules = drvs: let
-#     modules = filter hasPythonModule drvs;
-#   in unique ([python] ++ modules ++ concatLists (catAttrs "requiredPythonModules" modules));
-# 
-#   removePythonPrefix = name:
-#     removePrefix namePrefix name;
-#   buildPythonApplication = python.pkgs.buildPythonApplication;
-#   buildPythonPackage = python.pkgs.buildPythonPackage;
-#   toPythonModule = python.pkgs.toPythonModule;
-#   toPythonApplication = python.pkgs.toPythonApplication;
-#   disabledIf = python.pkgs.disabledIf;
-#   makePythonPath = python.pkgs.makePythonPath;
-#   bootstrapped-pip = python.pkgs.bootstrapped-pip;
-#   hasPythonModule = python.pkgs.hasPythonModule;
-#   buildSetupcfg = python.pkgs.buildSetupcfg;
-# in 
-python.pkgs // {
+python.pkgs // rec {
 
-  altgraph = python.callPackage ./pkgs/development/python-modules/altgraph { };
-  base64io = python.callPackage ./pkgs/development/python-modules/base64io { };
-  Flask = python.callPackage ./pkgs/development/python-modules/Flask { };
-  flasgger = python.callPackage ./pkgs/development/python-modules/flassger { };
-  macholib = python.callPackage ./pkgs/development/python-modules/macholib { };
-  paramiko = python.callPackage ./pkgs/development/python-modules/paramiko { };
-  pyinstaller = python.callPackage ./pkgs/development/python-modules/pyinstaller { };
-  pyminifier = python.callPackage ./pkgs/development/python-modules/pyminifier { };
-  pyinstaller-hooks-contrib = python.callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
-  PyYAML = python.callPackage ./pkgs/development/python-modules/PyYAML { };
-  xlutils = python.callPackage ./pkgs/development/python-modules/xlutils { };
-  zlib_wrapper = python.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
+  altgraph = python.pkgs.callPackage ./pkgs/development/python-modules/altgraph { };
+  argparse = python.pkgs.callPackage ./pkgs/development/python-modules/argparse { };
+  base64io = python.pkgs.callPackage ./pkgs/development/python-modules/base64io { };
+  Flask = python.pkgs.callPackage ./pkgs/development/python-modules/Flask { };
+  flasgger = python.pkgs.callPackage ./pkgs/development/python-modules/flasgger { };
+  macholib = python.pkgs.callPackage ./pkgs/development/python-modules/macholib { };
+  paramiko = python.pkgs.callPackage ./pkgs/development/python-modules/paramiko { };
+  pyinstaller = python.pkgs.callPackage ./pkgs/development/python-modules/pyinstaller { };
+  pyminifier = python.pkgs.callPackage ./pkgs/development/python-modules/pyminifier { };
+  pyinstaller-hooks-contrib = python.pkgs.callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
+  PyYAML = python.pkgs.callPackage ./pkgs/development/python-modules/PyYAML { };
+  sublist3r = python.pkgs.callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
+  xlutils = python.pkgs.callPackage ./pkgs/development/python-modules/xlutils { };
+  zlib_wrapper = python.pkgs.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 
-  httpbin = python.callPackage ./pkgs/servers/httpbin { };
+  # # empire = python.pkgs.callPackage ./pkgs/tools/security { };
+  httpbin = python.pkgs.callPackage ./pkgs/servers/httpbin { };
 }

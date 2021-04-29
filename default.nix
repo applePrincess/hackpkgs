@@ -2,7 +2,7 @@
 with pkgs;
 rec {
   inherit (python3.pkgs) buildPythonPackage;
-  pythonPackages = callPackage ./python-packages.nix { pkgs = newPkgs; stdenv = newPkgs.stdenv; python = python3; };
+  pythonPackages = callPackage ./python-packages.nix { python = python3; };
 
   dirbuster =  callPackage ./pkgs/tools/security/dirbuster { };
 
@@ -22,6 +22,5 @@ rec {
 
   stegsolve = callPackage ./pkgs/tools/security/stegsolve { };
 
-  zsteg = callPackage ./pkgs/tools/security/zsteg { lib = newLib; };
-
+  sublist3r = pythonPackages.sublist3r;
 }
