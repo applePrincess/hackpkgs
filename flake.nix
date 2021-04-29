@@ -24,7 +24,30 @@
           # pwncat = pkgs.pythonPackages.callPackage ./pkgs/tools/security/pwncat {} ;
 
           stegsolve = pkgs.callPackage ./pkgs/tools/security/stegsolve { };
+
         };
+        python3Packages = pkgs.python3.pkgs // (with pkgs.python3.pkgs; rec {
+          altgraph = callPackage ./pkgs/development/python-modules/altgraph { };
+          argparse = callPackage ./pkgs/development/python-modules/argparse { };
+          base64io = callPackage ./pkgs/development/python-modules/base64io { };
+          Flask = callPackage ./pkgs/development/python-modules/Flask { };
+          flasgger = callPackage ./pkgs/development/python-modules/flasgger { };
+          macholib = callPackage ./pkgs/development/python-modules/macholib { };
+          paramiko = callPackage ./pkgs/development/python-modules/paramiko { };
+          pyinstaller = callPackage ./pkgs/development/python-modules/pyinstaller { };
+          pyminifier = callPackage ./pkgs/development/python-modules/pyminifier { };
+          pyinstaller-hooks-contrib = callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
+          PyYAML = callPackage ./pkgs/development/python-modules/PyYAML { };
+          requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
+          sublist3r = callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
+          xlutils = callPackage ./pkgs/development/python-modules/xlutils { };
+          zlib_wrapper = callPackage ./pkgs/development/python-modules/zlib_wrapper { };
+
+          # # empire = python.pkgs.callPackage ./pkgs/tools/security { };
+          httpbin = callPackage ./pkgs/servers/httpbin { };
+
+          # metagoofil = callPackage ./pkgs/tools/security/metagoofil { pdfminer = pdfminer; };
+        });
       }
     );
 }

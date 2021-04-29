@@ -13,6 +13,7 @@ python.pkgs // rec {
   pyminifier = python.pkgs.callPackage ./pkgs/development/python-modules/pyminifier { };
   pyinstaller-hooks-contrib = python.pkgs.callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
   PyYAML = python.pkgs.callPackage ./pkgs/development/python-modules/PyYAML { };
+  requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
   sublist3r = python.pkgs.callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
   xlutils = python.pkgs.callPackage ./pkgs/development/python-modules/xlutils { };
   zlib_wrapper = python.pkgs.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
