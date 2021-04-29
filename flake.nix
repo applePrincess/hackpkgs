@@ -41,7 +41,7 @@
           requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
           sherlock = callPackage ./pkgs/tools/security/sherlock {
             requests-futures = requests-futures;
-            torrequests = torrequests;
+            torrequest = torrequest;
           };
           sublist3r = callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
           torrequest = callPackage ./pkgs/development/python-modules/torrequest { };

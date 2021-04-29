@@ -14,6 +14,7 @@ python.pkgs // rec {
   pyinstaller-hooks-contrib = python.pkgs.callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
   PyYAML = python.pkgs.callPackage ./pkgs/development/python-modules/PyYAML { };
   requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
+  sherlock = python.pkgs.callPackage ./pkgs/tools/security/sherlock { };
   sublist3r = python.pkgs.callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
   torrequests = python.pkgs.callPackage ./pkgs/development/python-modules/torrequests { };
   xlutils = python.pkgs.callPackage ./pkgs/development/python-modules/xlutils { };
