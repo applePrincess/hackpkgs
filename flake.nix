@@ -40,6 +40,7 @@
           PyYAML = callPackage ./pkgs/development/python-modules/PyYAML { };
           requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
           sublist3r = callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
+          torrequests = callPackage ./pkgs/development/python-modules/torrequests { };
           xlutils = callPackage ./pkgs/development/python-modules/xlutils { };
           zlib_wrapper = callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 

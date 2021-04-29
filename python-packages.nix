@@ -15,6 +15,7 @@ python.pkgs // rec {
   PyYAML = python.pkgs.callPackage ./pkgs/development/python-modules/PyYAML { };
   requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
   sublist3r = python.pkgs.callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
+  torrequests = python.pkgs.callPackage ./pkgs/development/python-modules/torrequests { };
   xlutils = python.pkgs.callPackage ./pkgs/development/python-modules/xlutils { };
   zlib_wrapper = python.pkgs.callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 
