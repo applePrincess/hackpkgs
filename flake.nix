@@ -25,6 +25,8 @@
 
           stegsolve = pkgs.callPackage ./pkgs/tools/security/stegsolve { };
 
+          superenum = pkgs.callPackage ./pkgs/tools/security/superenum { };
+
         };
         python3Packages = pkgs.python3.pkgs // (with pkgs.python3.pkgs; rec {
           altgraph = callPackage ./pkgs/development/python-modules/altgraph { };
