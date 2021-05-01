@@ -36,6 +36,7 @@
           flasgger = callPackage ./pkgs/development/python-modules/flasgger { };
           macholib = callPackage ./pkgs/development/python-modules/macholib { };
           paramiko = callPackage ./pkgs/development/python-modules/paramiko { };
+          python-magic = callPackage ./pkgs/development/python-modules/python-magic { };
           pyinstaller = callPackage ./pkgs/development/python-modules/pyinstaller { };
           pyminifier = callPackage ./pkgs/development/python-modules/pyminifier { };
           pyinstaller-hooks-contrib = callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
