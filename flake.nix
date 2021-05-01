@@ -41,6 +41,7 @@
           pyminifier = callPackage ./pkgs/development/python-modules/pyminifier { };
           pyinstaller-hooks-contrib = callPackage ./pkgs/development/python-modules/pyinstaller-hooks-contrib { };
           PyYAML = callPackage ./pkgs/development/python-modules/PyYAML { };
+          pyzbar = callPackage ./pkgs/development/python-modules/pyzbar { };
           requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
           sherlock = callPackage ./pkgs/tools/security/sherlock {
             requests-futures = requests-futures;
