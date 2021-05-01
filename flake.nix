@@ -32,6 +32,7 @@
           altgraph = callPackage ./pkgs/development/python-modules/altgraph { };
           argparse = callPackage ./pkgs/development/python-modules/argparse { };
           base64io = callPackage ./pkgs/development/python-modules/base64io { };
+          clipboard = callPackage ./pkgs/development/python-modules/clipboard { };
           Flask = callPackage ./pkgs/development/python-modules/Flask { };
           flasgger = callPackage ./pkgs/development/python-modules/flasgger { };
           macholib = callPackage ./pkgs/development/python-modules/macholib { };
