@@ -1,18 +1,15 @@
-{ stdenv, lib, fetchzip, libpcap }:
+{ stdenv, fetchurl, libpcap }:
+
 stdenv.mkDerivation rec {
   name = "netdiscover";
   version = "0.3-pre-beta7";
 
-  src = fetchzip {
+  src = fetchurl {
     url = "mirror://sourceforge/${name}/${name}-${version}-LINUXONLY.tar.gz";
-    sha256 = "sha256-r3Zpobfogt4usplF0VDbXH+hR0uajQ3DaASgPC3+OyM=";
+    sha256 = "sha256-AcbgkMOwbjdABffvzq07Wy9j9Hv7lDg8Hb3pq88c2Ko=";
   };
 
   buildInputs = [
     libpcap
   ];
-
-  meta = {
-    platforms = lib.platforms.linux;
-  };
 }
