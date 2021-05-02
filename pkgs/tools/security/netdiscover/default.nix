@@ -1,4 +1,4 @@
-{ stdenv, fetchzip, libpcap }:
+{ stdenv, lib, fetchzip, libpcap }:
 stdenv.mkDerivation rec {
   name = "netdiscover";
   version = "0.3-pre-beta7";
@@ -11,4 +11,8 @@ stdenv.mkDerivation rec {
   buildInputs = [
     libpcap
   ];
+
+  meta = {
+    platforms = lib.platforms.linux;
+  };
 }
