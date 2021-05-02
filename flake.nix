@@ -19,6 +19,8 @@
 
           mssql-tools = pkgs.callPackage ./pkgs/applications/misc/mssql-tools { };
 
+          netdiscover = pkgs.callPackage ./pkgs/tools/security/netdiscover { };
+
           nikto = pkgs.callPackage ./pkgs/tools/security/nikto { };
 
           # pwncat = pkgs.pythonPackages.callPackage ./pkgs/tools/security/pwncat {} ;
