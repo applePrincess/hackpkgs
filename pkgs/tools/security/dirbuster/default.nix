@@ -1,4 +1,4 @@
-{stdenv, fetchFromGitLab, jre, makeWrapper }:
+{ stdenv, fetchFromGitLab, jre, makeWrapper }:
 
 stdenv.mkDerivation rec {
   name = "dirbuster";
@@ -12,11 +12,11 @@ stdenv.mkDerivation rec {
   };
 
   installPhase = ''
-     mkdir -p $out/bin $out/share/$name $out/lib
-     cp ./directory*.txt "./DirBuster-${version}.jar" $out/share/$name
-     cp lib/*.jar $out/lib
-     makeWrapper ${jre}/bin/java $out/bin/$name \
-       --add-flags "-jar $out/share/$name/DirBuster-${version}.jar"
+    mkdir -p $out/bin $out/share/$name $out/lib
+    cp ./directory*.txt "./DirBuster-${version}.jar" $out/share/$name
+    cp lib/*.jar $out/lib
+    makeWrapper ${jre}/bin/java $out/bin/$name \
+      --add-flags "-jar $out/share/$name/DirBuster-${version}.jar"
   '';
 
   nativeBuildInputs = [ makeWrapper jre ];

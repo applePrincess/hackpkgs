@@ -1,11 +1,13 @@
-{ buildPythonPackage, fetchPypi }:
+{ buildPythonPackage, fetchFromGitHub }:
 buildPythonPackage rec {
-  pname = "pyzber";
+  pname = "pyzbar";
   version = "0.1.8";
 
-  src = fetchPypi {
-    inherit pname version;
-    sha256 = "0e204b904e093e5e75aa85e0203bb0e02888105732a509b51f31cff400f34265";
+  src = fetchFromGitHub {
+    owner = "NaturalHistoryMuseum";
+    repo = pname;
+    rev = "v${version}";
+    sha256 = "sha256-VEMfGCqXErNI4RJKKc3Mly5KytciahD//zRtcctzFLs=";
   };
 
   doCheck = false;

@@ -1,4 +1,4 @@
-{ lib, buildPythonPackage, fetchFromGitHub, pynacl, bcrypt, invoke, pyasn1, 
+{ lib, buildPythonPackage, fetchFromGitHub, pynacl, bcrypt, invoke, pyasn1,
   gssapi, cryptography, pytest, pytest-relaxed }:
 
 buildPythonPackage rec {
@@ -7,7 +7,7 @@ buildPythonPackage rec {
 
   src = fetchFromGitHub {
     owner = pname;
-    repo = pname; 
+    repo = pname;
     rev = "5cf145ffd3d7cd4d96a511376267a7f27cce5eed";
     sha256 = "1hwa951rqgdwzfckk0kjhlcd58qb48h89q831b709b50mb6qmjry";
   };

@@ -8,4 +8,6 @@ buildPythonPackage rec {
     inherit pname version;
     sha256 = "ca884349f2c92ce830e3f498c5b7c7051fe2942c3ee4332f65213b8ebff15a62";
   };
+
+  doCheck = false;
 }

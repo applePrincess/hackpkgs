@@ -1,9 +1,6 @@
 { lib, buildPythonPackage, fetchPypi, callPackage,
-#  altgraph, pyinstaller-hooks-contrib 
+  altgraph, pyinstaller-hooks-contrib
 }:
-let altgraph = callPackage ../altgraph { };
-    pyinstaller-hooks-contrib = callPackage ../pyinstaller-hooks-contrib { };
-in
 buildPythonPackage rec {
   pname = "pyinstaller";
   version = "4.1";
@@ -15,7 +12,7 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     altgraph
-    pyinstaller-hooks-contrib 
+    pyinstaller-hooks-contrib
   ];
 
   doCheck = false;
