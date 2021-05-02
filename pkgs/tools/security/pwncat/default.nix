@@ -1,17 +1,13 @@
 { lib, buildPythonApplication, fetchFromGitHub, colorama, netifaces, pygments,
   prompt_toolkit, requests, rich, sqlalchemy, python-rapidjson, callPackage,
-  # base64io, paramiko
+  base64io, paramiko
 }:
-
-let base64io = callPackage ../../../development/python-modules/base64io {};
-    paramiko = callPackage ../../../development/python-modules/paramiko {};
-in
 
 buildPythonApplication rec {
 
   pname = "pwncat";
   version = "0.3.1";
-  
+
   src = fetchFromGitHub {
     owner = "calebstewart";
     repo = pname;
@@ -35,14 +31,10 @@ buildPythonApplication rec {
     ./no-package-from-github.patch
     ./remove-indirectly-used-setup.patch
     ./remove-indirectly-used-requirements.patch
-    # ./allow-newer.patch
   ];
   postPatch = ''
     sed -i 's/==.*//' requirements.txt
   '';
 
   doCheck = false;
-  # meta = {
-  #  
-  # };
 }
