@@ -1,15 +1,22 @@
-{ stdenv, fetchurl, libpcap }:
+{ stdenv, fetchFromGitHub, autoconf, automake, libpcap, libnet }:
 
 stdenv.mkDerivation rec {
   name = "netdiscover";
-  version = "0.3-pre-beta7";
+  version = "0.7";
 
-  src = fetchurl {
-    url = "mirror://sourceforge/${name}/${name}-${version}-LINUXONLY.tar.gz";
-    sha256 = "sha256-AcbgkMOwbjdABffvzq07Wy9j9Hv7lDg8Hb3pq88c2Ko=";
+  src =fetchFromGitHub {
+    owner = "netdiscover-scanner";
+    repo = name;
+    rev = version;
+    sha256 = "sha256-0iMOWhT6ApkKJyyUdn2JnKN89rHeNhL7irqZ8GhGHD0=";
   };
 
+  preConfigure = "./autogen.sh";
+
   buildInputs = [
+    autoconf
+    automake
     libpcap
+    libnet
   ];
 }
