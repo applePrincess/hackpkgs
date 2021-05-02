@@ -15,6 +15,8 @@
 
           GTFOBLookup = pkgs.callPackage ./pkgs/tools/security/GTFOBLookup { };
 
+          logic = pkgs.callPackage ./pkgs/tools/misc/logic { };
+
           msodbcsql = pkgs.callPackage ./pkgs/development/libraries/msodbcsql { };
 
           mssql-tools = pkgs.callPackage ./pkgs/applications/misc/mssql-tools { };
@@ -37,7 +39,14 @@
           clipboard = callPackage ./pkgs/development/python-modules/clipboard { };
           Flask = callPackage ./pkgs/development/python-modules/Flask { };
           flasgger = callPackage ./pkgs/development/python-modules/flasgger { };
+          katana = callPackage ./pkgs/tools/misc/katana {
+            argparse = argparse;
+            clipboard = clipboard;
+            python-magic = python-magic;
+            pyzbar = pyzbar;
+          };
           macholib = callPackage ./pkgs/development/python-modules/macholib { };
+          mbstrdecoder = callPackage ./pkgs/development/python-modules/mbstrdecoder { };
           paramiko = callPackage ./pkgs/development/python-modules/paramiko { };
           python-magic = callPackage ./pkgs/development/python-modules/python-magic { };
           pyinstaller = callPackage ./pkgs/development/python-modules/pyinstaller { };
@@ -50,8 +59,10 @@
             requests-futures = requests-futures;
             torrequest = torrequest;
           };
+          sphinx-rtd-theme = callPackage ./pkgs/development/python-modules/sphinx-rtd-theme { };
           sublist3r = callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
           torrequest = callPackage ./pkgs/development/python-modules/torrequest { };
+          typepy = callPackage ./pkgs/development/python-modules/typepy { mbstrdecoder = mbstrdecoder; };
           xlutils = callPackage ./pkgs/development/python-modules/xlutils { };
           zlib_wrapper = callPackage ./pkgs/development/python-modules/zlib_wrapper { };
 

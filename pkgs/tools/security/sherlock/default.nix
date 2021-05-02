@@ -7,8 +7,8 @@ buildPythonApplication rec {
   srcs = fetchFromGitHub {
     owner = "applePrincess";
     repo = pname;
-    rev = "774c0940648acebaf5af9a40c7a296b8acdb017e";
-    sha256 = "sha256-663nTOWBhTCsYQmTt2PXkZZdb/6PR/p4+lTwtNndXlo=";
+    rev = "2282dcf9c4e40c5af3e1b5aae6099a53587f1090";
+    sha256 = "sha256-Ro0LrGan9Ear2jYAD/xmeEPlyYMpzBD3uCu/R9Zs8D4=";
   };
 
   propagatedBuildInputs = [
