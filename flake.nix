@@ -15,7 +15,7 @@
 
           GTFOBLookup = pkgs.callPackage ./pkgs/tools/security/GTFOBLookup { };
 
-          logic = pkgs.callPackage ./pkgs/tools/misc/logic { };
+          # logic = pkgs.callPackage ./pkgs/tools/misc/logic { };
 
           msodbcsql = pkgs.callPackage ./pkgs/development/libraries/msodbcsql { };
 
