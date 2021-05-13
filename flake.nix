@@ -31,6 +31,11 @@
 
           superenum = pkgs.callPackage ./pkgs/tools/security/superenum { };
 
+          sherlock = pkgs.callPackage ./pkgs/tools/security/sherlock {
+            requests-futures = python3Packages.requests-futures;
+            torrequest = python3Packages.torrequest;
+          };
+
         };
         python3Packages = pkgs.python3.pkgs // (with pkgs.python3.pkgs; rec {
           altgraph = callPackage ./pkgs/development/python-modules/altgraph { };
@@ -55,10 +60,10 @@
           PyYAML = callPackage ./pkgs/development/python-modules/PyYAML { };
           pyzbar = callPackage ./pkgs/development/python-modules/pyzbar { };
           requests-futures = python.pkgs.callPackage ./pkgs/development/python-modules/requests-futures { };
-          sherlock = callPackage ./pkgs/tools/security/sherlock {
-            requests-futures = requests-futures;
-            torrequest = torrequest;
-          };
+          # sherlock = callPackage ./pkgs/tools/security/sherlock {
+          #   requests-futures = requests-futures;
+          #   torrequest = torrequest;
+          # };
           sphinx-rtd-theme = callPackage ./pkgs/development/python-modules/sphinx-rtd-theme { };
           sublist3r = callPackage ./pkgs/tools/security/sublist3r { argparse = argparse; };
           torrequest = callPackage ./pkgs/development/python-modules/torrequest { };
