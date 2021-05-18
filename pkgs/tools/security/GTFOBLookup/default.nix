@@ -1,6 +1,5 @@
 { stdenv, python3, callPackage, fetchFromGitHub, makeWrapper }:
-let pyyaml = python3.pkgs.callPackage ./../../../development/python-modules/PyYAML { };
-    pyenv = python3.withPackages (ps: with ps; [
+let pyenv = python3.withPackages (ps: with ps; [
       appdirs
       colorama
       GitPython
