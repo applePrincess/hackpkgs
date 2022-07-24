@@ -6,7 +6,10 @@
 
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = import nixpkgs { system = system; };
+      let pkgs = import nixpkgs {
+        system = system;
+        config.allowUnfree = true;
+      };
       in rec {
         packages = flake-utils.lib.flattenTree {
           dirbuster = pkgs.callPackage ./pkgs/tools/security/dirbuster { };
